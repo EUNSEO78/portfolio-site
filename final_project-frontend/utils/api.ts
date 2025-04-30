@@ -40,3 +40,31 @@ export const viewGuestbook = async (id: number) => {
   const response = await axios.patch(`${API_URL}/guestbooks/${id}/view`);
   return response.data;
 };
+
+// 댓글 가져오기
+export const getComments = async (guestbookId: number): Promise<Comment[]> => {
+  const response = await axios.get(`${API_URL}/comments`, {
+    params: { guestbookId },
+  });
+  return response.data;
+};
+
+// 댓글 작성
+export const createComment = async (
+  comment: Pick<Comment, "guestbookId" | "author" | "content">
+) => {
+  const response = await axios.post(`${API_URL}/comments`, comment);
+  return response;
+};
+
+// 댓글 삭제
+export const removeComment = async (id: number) => {
+  const response = await axios.delete(`${API_URL}/comments/${id}`);
+  return response;
+};
+
+// 댓글 좋아요
+export const likeComment = async (id: number) => {
+  const response = await axios.patch(`${API_URL}/comments/${id}/like`);
+  return response.data;
+};

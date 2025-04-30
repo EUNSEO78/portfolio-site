@@ -1,14 +1,17 @@
 "use client";
 import { MouseEvent } from "react";
-import { removeGuestbook } from "@/utils/api";
+import { removeComment, removeGuestbook } from "@/utils/api";
 import { useRouter } from "next/navigation";
 
-interface DeleteButtonProps {
-  guestbookId: string;
+interface CommentDeleteButtonProps {
+  commentId: number;
+  onDeleteSuccess: () => void;
 }
 
-export default function DeleteButton({ guestbookId }: DeleteButtonProps) {
-  const router = useRouter();
+export default function CommentDeleteButton({
+  commentId,
+  onDeleteSuccess,
+}: CommentDeleteButtonProps) {
   const handleDelete = async (e: MouseEvent) => {
     e.preventDefault();
 
@@ -16,9 +19,9 @@ export default function DeleteButton({ guestbookId }: DeleteButtonProps) {
     if (!confirmed) return;
 
     try {
-      await removeGuestbook(guestbookId);
-      router.push("/guestbook");
+      await removeComment(commentId);
       alert("글이 삭제되었습니다.");
+      onDeleteSuccess();
     } catch (err) {
       console.error("삭제 실패", err);
       alert("삭제에 실패했습니다.");
@@ -27,7 +30,7 @@ export default function DeleteButton({ guestbookId }: DeleteButtonProps) {
 
   return (
     <button
-      className="p-3 font-bold text-white bg-green-500 rounded-xl hover:bg-[#2dcf6c]/50 "
+      className="py-0.5 font-bold text-white bg-green-500 rounded-xl hover:bg-[#2dcf6c]/50 "
       onClick={handleDelete}
     >
       삭제

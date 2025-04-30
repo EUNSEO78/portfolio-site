@@ -14,7 +14,8 @@ import { Comment } from './comments/entities/comment.entity';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '1234',
+      password: '1234'
+      // password: 'dmstjalstj78!',
       database: 'guestbooks',
       entities: [Guestbook, Comment],
       synchronize: true,

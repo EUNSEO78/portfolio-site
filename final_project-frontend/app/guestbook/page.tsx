@@ -14,7 +14,7 @@ const GuestbookPage = () => {
   }, []);
 
   return (
-    <main className="w-screen h-fit bg-[#1d2025]/80">
+    <main className="w-screen min-h-screen bg-[#1d2025]/80">
       <div className="w-full max-w-[80%] mx-auto pt-36">
         <GuestbookHeader />
         <div className="w-full max-w-[80%] mx-auto grid grid-cols-3 gap-6">

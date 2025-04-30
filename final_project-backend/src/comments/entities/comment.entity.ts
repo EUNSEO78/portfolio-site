@@ -3,6 +3,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -13,10 +14,16 @@ export class Comment {
   id: number;
 
   @Column()
+  guestbookId: number;
+
+  @Column()
   author: string;
 
   @Column()
   content: string;
+
+  @Column({ type: 'int', default: 0 })
+  likes: number;
 
   @CreateDateColumn()
   createdAt: Date;
@@ -24,5 +31,6 @@ export class Comment {
   @ManyToOne(() => Guestbook, (guestbook) => guestbook.comments, {
     onDelete: 'CASCADE',
   })
+  @JoinColumn({ name: 'guestbookId' })
   guestbook: Guestbook;
 }

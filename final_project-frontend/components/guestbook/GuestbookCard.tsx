@@ -50,7 +50,9 @@ export default function GuestbookCard({ guestbook }: GuestbookCardProps) {
             <h3 className="text-lg font-semibold text-white">
               {guestbook.author}
             </h3>
-            <p className="text-sm text-gray-400">{guestbook.createdAt}</p>
+            <p className="text-sm text-gray-400">
+              {new Date(guestbook.createdAt).toLocaleString()}
+            </p>
           </div>
           <button
             className="flex items-center space-x-1 hover:font-bold hover:text-[#2dcf6c]"

@@ -14,7 +14,7 @@ export class CreateCommentDto {
   @IsString()
   @IsNotEmpty({ message: '작성자를 입력하세요.' })
   @MinLength(2, { message: '작성자는 2글자 이상이어야 합니다.' })
-  @MaxLength(10, { message: '작성자는 20글자 이하여야 합니다.' })
+  @MaxLength(10, { message: '작성자는 10글자 이하여야 합니다.' })
   author: string;
 
   @IsString()

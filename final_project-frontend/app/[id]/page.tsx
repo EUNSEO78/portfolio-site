@@ -1,3 +1,4 @@
+import CommentSection from "@/components/guestbook/CommentSection";
 import DeleteButton from "@/components/guestbook/DeleteButtom";
 import GuestbookHeader from "@/components/guestbook/GuestbookHeader";
 import { getGuestbook } from "@/utils/api";
@@ -7,10 +8,10 @@ const Page = async ({ params }: { params: { id: string } }) => {
   const guestbook = await getGuestbook(id);
 
   return (
-    <div className="h-screen bg-[#1d2025] text-white rounded-lg shadow-md">
+    <div className="min-h-screen bg-[#1d2025] text-white rounded-lg shadow-md">
       <div className="w-full max-w-[80%] mx-auto pt-36">
         <GuestbookHeader />
-        <div className="w-[500px] mx-auto p-16  bg-white text-black rounded-2xl my-28 flex flex-col gap-13">
+        <div className="w-[500px] mx-auto p-16  bg-white text-black rounded-2xl flex flex-col gap-13">
           <div className="flex gap-2 text-[#2dcf6c] font-black">
             <span>❤️{guestbook.likes}</span>
             <span>👀{guestbook.views}</span>
@@ -25,6 +26,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
           </div>
           <DeleteButton guestbookId={guestbook.id} />
         </div>
+        <CommentSection guestbookId={guestbook.id} />
       </div>
     </div>
   );

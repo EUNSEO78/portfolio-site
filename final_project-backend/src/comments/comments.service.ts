@@ -26,33 +26,35 @@ export class CommentsService {
       throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
     }
     const comment = this.commentRepository.create({
-      ...createCommentDto,
+      author: createCommentDto.author,
+      content: createCommentDto.content,
       guestbook,
     });
 
     return this.commentRepository.save(comment);
   }
 
-  async findAll(guestbookId: number) {
-    const guestbook = await this.guestbookRepository.findOne({
-      where: { id: guestbookId },
-    });
-    if (!guestbook) {
-      throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
-    }
-
-    return this.commentRepository.find({
+  async findAllByGuestbookId(guestbookId: number): Promise<Comment[]> {
+    return await this.commentRepository.find({
       where: { guestbook: { id: guestbookId } },
-      order: { createdAt: 'ASC' },
+      order: { createdAt: 'DESC' },
     });
   }
 
   async remove(id: number) {
     const comment = await this.commentRepository.findOne({ where: { id } });
     if (!comment) {
-      throw new NotFoundException('댓글을 찾을 수 없습니다.');
+      throw new NotFoundException('해당 댓글을 찾을 수 없습니다.');
     }
-
     return this.commentRepository.remove(comment);
+  }
+
+  async increaseLikes(id: number) {
+    const comment = await this.commentRepository.findOne({ where: { id } });
+    if (!comment) {
+      throw new NotFoundException('해당 댓글을 찾을 수 없습니다.');
+    }
+    comment.likes += 1;
+    return this.commentRepository.save(comment);
   }
 }
