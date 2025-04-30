@@ -1,0 +1,17 @@
+import { BackgroundVideoProps } from "@/types/type";
+
+const BackgroundVideo = ({ src }: BackgroundVideoProps) => {
+  return (
+    <video
+      muted
+      playsInline
+      autoPlay
+      loop
+      className="w-full h-full object-cover brightness-50"
+    >
+      <source src={src} />
+    </video>
+  );
+};
+
+export default BackgroundVideo;

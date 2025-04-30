@@ -1,0 +1,17 @@
+/* 특정 요소에만 스크롤바 스타일을 적용 */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: #2ccf6c;
+  border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background-color: #2a2d34;
+}
