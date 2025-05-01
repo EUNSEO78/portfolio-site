@@ -4,7 +4,7 @@ import { removeGuestbook } from "@/utils/api";
 import { useRouter } from "next/navigation";
 
 interface DeleteButtonProps {
-  guestbookId: string;
+  guestbookId: number;
 }
 
 export default function DeleteButton({ guestbookId }: DeleteButtonProps) {

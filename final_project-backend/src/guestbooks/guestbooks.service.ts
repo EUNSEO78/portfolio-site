@@ -8,13 +8,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Guestbook } from './entities/guestbook.entity';
 import { Repository } from 'typeorm';
 
-export interface ApiRepository {
-  success: boolean;
-  message: string;
-  statusCode: number;
-  data: Guestbook[];
-}
-
 @Injectable()
 export class GuestbooksService {
   constructor(
@@ -22,37 +15,36 @@ export class GuestbooksService {
     private guestbookRepository: Repository<Guestbook>,
   ) {}
 
-  // 생성
-  async create(createGuestbookDto: CreateGuestbookDto) {
-    const guestbook = await this.guestbookRepository.create(createGuestbookDto);
+  // 유틸 메서드(remove, increaseLikes, increaseViews)
+  private async findGuestbookOrFail(id: number): Promise<Guestbook> {
+    const guestbook = await this.guestbookRepository.findOne({ where: { id } });
     if (!guestbook) {
-      throw new BadRequestException('입력란 확인');
+      throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
     }
-    await this.guestbookRepository.save(guestbook);
-    return {
-      success: true,
-      message: '방명록이 저장되었습니다.',
-    };
+
+    return guestbook;
+  }
+
+  // 생성
+  async create(createGuestbookDto: CreateGuestbookDto): Promise<Guestbook> {
+    const guestbook = this.guestbookRepository.create(createGuestbookDto);
+    if (!guestbook) {
+      throw new BadRequestException('입력란을 확인해주세요.');
+    }
+    return await this.guestbookRepository.save(guestbook);
   }
 
   // 모두 조회 [페이징 추가 고려]
-  async findAll(): Promise<ApiRepository> {
-    const guestbooks = await this.guestbookRepository.find({
+  async findAll(): Promise<Guestbook[]> {
+    return await this.guestbookRepository.find({
       order: {
         createdAt: 'DESC',
       },
     });
-
-    return {
-      success: true,
-      message: '모든 방명록이 조회되었습니다.',
-      statusCode: 200,
-      data: guestbooks,
-    };
   }
 
   // 상세 조회
-  async findOne(id: number) {
+  async findOne(id: number): Promise<Guestbook> {
     const guestbook = await this.guestbookRepository.findOne({
       where: { id },
       relations: ['comments'],
@@ -60,45 +52,26 @@ export class GuestbooksService {
     if (!guestbook) {
       throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
     }
-    return {
-      success: true,
-      message: `${id}번 방명록이 조회되었습니다.`,
-      statusCode: 200,
-      data: guestbook,
-    };
+    return guestbook;
   }
 
   // 삭제
-  async remove(id: number) {
-    const guestbook = await this.guestbookRepository.findOne({ where: { id } });
-    if (!guestbook) {
-      throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
-    }
+  async remove(id: number): Promise<void> {
+    const guestbook = await this.findGuestbookOrFail(id);
     await this.guestbookRepository.remove(guestbook);
-    return {
-      success: true,
-      message: `${id}번 방명록이 삭제되었습니다.`,
-      statusCode: 200,
-    };
   }
 
   // 좋아요 수 증가
-  async increaseLikes(id: number) {
-    const guestbook = await this.guestbookRepository.findOne({ where: { id } });
-    if (!guestbook) {
-      throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
-    }
+  async increaseLikes(id: number): Promise<Guestbook> {
+    const guestbook = await this.findGuestbookOrFail(id);
     guestbook.likes += 1;
-    return this.guestbookRepository.save(guestbook);
+    return await this.guestbookRepository.save(guestbook);
   }
 
   // 조회수 증가
-  async increaseViews(id: number) {
-    const guestbook = await this.guestbookRepository.findOne({ where: { id } });
-    if (!guestbook) {
-      throw new NotFoundException('해당 방명록을 찾을 수 없습니다.');
-    }
+  async increaseViews(id: number): Promise<Guestbook> {
+    const guestbook = await this.findGuestbookOrFail(id);
     guestbook.views += 1;
-    return this.guestbookRepository.save(guestbook);
+    return await this.guestbookRepository.save(guestbook);
   }
 }

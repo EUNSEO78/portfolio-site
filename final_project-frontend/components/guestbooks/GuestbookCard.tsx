@@ -1,12 +1,8 @@
-import { Guestbook } from "@/types/guestbook";
+import { Guestbook, GuestbookCardProps } from "@/types/guestbook";
 import { likeGuestbook, viewGuestbook } from "@/utils/api";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
-interface GuestbookCardProps {
-  guestbook: Guestbook;
-}
 
 export default function GuestbookCard({ guestbook }: GuestbookCardProps) {
   const [likes, setLikes] = useState(guestbook.likes);

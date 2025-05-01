@@ -1,4 +1,4 @@
-export type Guestbook = {
+export interface Guestbook {
   id: number;
   author: string;
   content: string;
@@ -6,13 +6,8 @@ export type Guestbook = {
   comments?: Comment[];
   likes: number;
   views: number;
-};
+}
 
-export type Comment = {
-  id: number;
-  author: string;
-  content: string;
-  likes: number;
-  createdAt: string;
-  guestbookId: number;
-};
+export interface GuestbookCardProps {
+  guestbook: Guestbook;
+}

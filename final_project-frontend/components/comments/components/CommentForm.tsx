@@ -1,10 +1,7 @@
+import { CommentFormProps } from "@/types/comment";
 import React, { useState } from "react";
 
-interface Props {
-  onSubmit: (formData: { author: string; content: string }) => void;
-}
-
-export default function CommentForm({ onSubmit }: Props) {
+export default function CommentForm({ onSubmit }: CommentFormProps) {
   const [formData, setFormData] = useState({ author: "", content: "" });
 
   const handleChange = (

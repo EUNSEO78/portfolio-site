@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { getComments, createComment } from "@/utils/api";
-import { Comment } from "@/types/guestbook";
-import CommentForm from "./CommentForm";
-import CommentList from "./CommentList";
+import { Comment } from "@/types/comment";
+import CommentForm from "./components/CommentForm";
+import CommentList from "./components/CommentList";
 
 export default function CommentSection({
   guestbookId,
@@ -32,7 +32,7 @@ export default function CommentSection({
   }) => {
     try {
       const response = await createComment({ guestbookId, ...formData });
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         loadComments(); // ✅ 새로고침
       }
     } catch (error) {

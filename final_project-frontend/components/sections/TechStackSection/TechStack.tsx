@@ -1,22 +1,5 @@
+import { stacks } from "@/data/data";
 import StackCard from "./components/StackCard";
-
-const stacks = [
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "MYSQL",
-  "Nest.js",
-  "Express.js",
-  "Prisma",
-  "Git",
-  "VS Code",
-  "GitHub",
-];
 
 const TechStack = () => {
   return (

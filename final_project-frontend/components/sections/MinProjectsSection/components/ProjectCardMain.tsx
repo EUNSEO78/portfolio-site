@@ -1,8 +1,6 @@
 import BackgroundVideo from "@/components/common/BackgroundVideo";
-import { BackgroundVideoProps, ProjectCardInfoProps } from "@/types/type";
+import { ProjectCardMainProps } from "@/types/type";
 import ProjectCardInfo from "../subcomponents/ProjectCardInfo";
-
-type ProjectCardMainProps = BackgroundVideoProps & ProjectCardInfoProps;
 
 const ProjectCardMain = ({
   src,

@@ -1,13 +1,6 @@
-import { Comment } from "@/types/guestbook";
+import { CommentListProps } from "@/types/comment";
 import CommentDeleteButton from "./CommentDeleteButton";
-import { useState } from "react";
 import { likeComment } from "@/utils/api";
-
-interface CommentListProps {
-  comments: Comment[];
-  onDelete: (commentId: number) => void;
-  onLikeUpdate: (commentId: number, newLikes: number) => void;
-}
 
 export default function CommentList({
   comments,

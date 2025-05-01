@@ -1,10 +1,5 @@
-import {
-  BadRequestException,
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCommentDto } from './dto/create-comment.dto';
-import { UpdateCommentDto } from './dto/update-comment.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Comment } from './entities/comment.entity';
 import { Repository } from 'typeorm';
@@ -18,7 +13,8 @@ export class CommentsService {
     private guestbookRepository: Repository<Guestbook>,
   ) {}
 
-  async create(createCommentDto: CreateCommentDto) {
+  // 생성
+  async create(createCommentDto: CreateCommentDto): Promise<Comment> {
     const guestbook = await this.guestbookRepository.findOne({
       where: { id: createCommentDto.guestbookId },
     });
@@ -31,9 +27,10 @@ export class CommentsService {
       guestbook,
     });
 
-    return this.commentRepository.save(comment);
+    return await this.commentRepository.save(comment);
   }
 
+  // 조회
   async findAllByGuestbookId(guestbookId: number): Promise<Comment[]> {
     return await this.commentRepository.find({
       where: { guestbook: { id: guestbookId } },
@@ -41,20 +38,22 @@ export class CommentsService {
     });
   }
 
-  async remove(id: number) {
+  // 삭제
+  async remove(id: number): Promise<void> {
     const comment = await this.commentRepository.findOne({ where: { id } });
     if (!comment) {
       throw new NotFoundException('해당 댓글을 찾을 수 없습니다.');
     }
-    return this.commentRepository.remove(comment);
+    await this.commentRepository.remove(comment);
   }
 
-  async increaseLikes(id: number) {
+  // 좋아요 수 증가
+  async increaseLikes(id: number): Promise<Comment> {
     const comment = await this.commentRepository.findOne({ where: { id } });
     if (!comment) {
       throw new NotFoundException('해당 댓글을 찾을 수 없습니다.');
     }
     comment.likes += 1;
-    return this.commentRepository.save(comment);
+    return await this.commentRepository.save(comment);
   }
 }

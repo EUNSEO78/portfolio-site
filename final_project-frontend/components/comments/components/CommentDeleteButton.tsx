@@ -1,12 +1,7 @@
 "use client";
 import { MouseEvent } from "react";
-import { removeComment, removeGuestbook } from "@/utils/api";
-import { useRouter } from "next/navigation";
-
-interface CommentDeleteButtonProps {
-  commentId: number;
-  onDeleteSuccess: () => void;
-}
+import { removeComment } from "@/utils/api";
+import { CommentDeleteButtonProps } from "@/types/comment";
 
 export default function CommentDeleteButton({
   commentId,
