@@ -2,7 +2,7 @@ const AboutMe = () => {
   return (
     <section
       id="about-me-page"
-      className="w-screen min-h-screen bg-[#1d2025] text-white flex justify-center items-center px-4"
+      className="w-screen h-screen bg-[#1d2025] text-white flex justify-center items-center px-4"
     >
       <div className="w-full max-w-[80%] md:max-w-[90%]">
         <div className="pb-6 text-4xl lg:text-3xl md:text-2xl sm:text-xl font-semibold">
