@@ -28,7 +28,16 @@ const MainProjects = () => {
       ScrollTrigger.refresh();
     }, 100);
 
-    return () => clearTimeout(timeout);
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", handleResize);
+    };
+    // return () => clearTimeout(timeout);
   }, []);
 
   return (
