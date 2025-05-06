@@ -16,6 +16,7 @@ const setupScrollAnimations = () => {
       pin: true,
       // pinSpacing: window.innerWidth <= 768,
       pinSpacing: false,
+      pinType: window.innerWidth <= 768 ? "fixed" : "transform",
       end: () => "+=" + panel.offsetHeight,
     });
   });
