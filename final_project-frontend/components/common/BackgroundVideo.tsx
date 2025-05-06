@@ -9,7 +9,7 @@ const BackgroundVideo = ({ src }: BackgroundVideoProps) => {
       loop
       className="w-full h-full object-cover brightness-50"
     >
-      <source src={src} type="video/mp4" />
+      <source src={src} />
     </video>
   );
 };
