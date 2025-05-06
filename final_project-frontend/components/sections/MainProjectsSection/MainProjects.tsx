@@ -34,7 +34,7 @@ const MainProjects = () => {
 
   return (
     <section className="w-screen bg-[#1d2025] text-white">
-      <div className="h-20 pb-6 mb-16 border-b border-b-[#494c51] flex justify-center items-end">
+      <div className="h-20 pb-6 mb-16 font-bold border-b border-b-[#494c51] flex justify-center items-end">
         <span>Main Project</span>
       </div>
       <div id="main-projects-page">
