@@ -3,7 +3,7 @@ import { BackgroundVideoProps } from "@/types/type";
 const BackgroundVideo = ({ src }: BackgroundVideoProps) => {
   return (
     <video
-      muted={true}
+      muted
       playsInline
       autoPlay
       loop
