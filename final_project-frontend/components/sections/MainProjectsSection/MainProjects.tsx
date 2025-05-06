@@ -41,7 +41,7 @@ const MainProjects = () => {
         {MainProjectsData.map((project, index) => (
           <article
             key={index}
-            className="panel opacity-0 transition-opacity bg-[#1d2025] min-h-screen flex items-center justify-center text-white"
+            className="panel opacity-0 transition-opacity bg-[#1d2025] h-screen flex items-center justify-center text-white"
           >
             <ProjectCardMain {...project} />
           </article>
