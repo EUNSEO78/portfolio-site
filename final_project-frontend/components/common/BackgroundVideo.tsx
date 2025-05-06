@@ -1,3 +1,4 @@
+"use client";
 import { BackgroundVideoProps } from "@/types/type";
 
 const BackgroundVideo = ({ src }: BackgroundVideoProps) => {
