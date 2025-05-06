@@ -5,7 +5,7 @@ const GuestbookHeader = () => {
   return (
     <header className="text-white mb-10 pb-6 border-b border-white/20 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-center sm:text-left">
-        방명록 ✍️
+        방명록 📒
       </h1>
 
       <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-3 items-center sm:items-end justify-center sm:justify-end">

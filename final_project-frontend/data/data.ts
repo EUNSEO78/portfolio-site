@@ -110,7 +110,7 @@ export const stacks = [
   "React",
   "Next.js",
   "Node.js",
-  "MYSQL",
+  "MySQL",
   "Nest.js",
   "Express.js",
   "Prisma",
