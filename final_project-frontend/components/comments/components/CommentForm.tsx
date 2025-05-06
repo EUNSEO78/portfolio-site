@@ -18,17 +18,17 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
   };
 
   return (
-    <div className="w-full flex flex-col gap-4">
-      <h2 className="text-2xl font-black border-b border-b-amber-50">
+    <div className="flex flex-col gap-4">
+      <h2 className="text-2xl font-bold border-b pb-1 border-amber-100">
         댓글 작성
       </h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           name="author"
           value={formData.author}
           onChange={handleChange}
           placeholder="작성자"
-          className="p-6 text-xl border rounded"
+          className="p-3 text-base border rounded"
           required
         />
         <textarea
@@ -36,10 +36,14 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
           value={formData.content}
           onChange={handleChange}
           placeholder="내용"
-          className="p-10 text-xl border rounded"
+          rows={5}
+          className="p-3 text-base border"
           required
         />
-        <button type="submit" className="bg-green-500 text-white py-2 rounded">
+        <button
+          type="submit"
+          className="bg-green-500 text-white py-2 rounded font-semibold hover:bg-green-600 transition"
+        >
           댓글 등록
         </button>
       </form>

@@ -25,7 +25,7 @@ export default function CommentDeleteButton({
 
   return (
     <button
-      className="py-0.5 font-bold text-white bg-green-500 rounded-xl hover:bg-[#2dcf6c]/50 "
+      className="px-3 py-1 text-xs font-bold text-white bg-green-500 rounded hover:bg-green-600 transition"
       onClick={handleDelete}
     >
       삭제

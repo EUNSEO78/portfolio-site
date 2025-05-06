@@ -23,6 +23,7 @@ export interface ClickButtonProps {
   hoverBgColor: keyof typeof TAILWIND_HOVER_COLORS;
   hoverTextColor?: "hover:text-black";
   onClick?: () => void;
+  className?: string;
 }
 
 // BackgroundVideo
@@ -54,6 +55,8 @@ export interface ModalProps {
 }
 export interface Project {
   id: number;
+  src: string;
+  page?: string;
   title: string;
   description: string;
   tech: string[];

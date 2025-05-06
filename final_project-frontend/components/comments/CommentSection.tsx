@@ -1,3 +1,5 @@
+// components/comments/CommentSection.tsx
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -33,7 +35,7 @@ export default function CommentSection({
     try {
       const response = await createComment({ guestbookId, ...formData });
       if (response.statusCode === 201) {
-        loadComments(); // ✅ 새로고침
+        loadComments();
       }
     } catch (error) {
       alert("댓글 작성 중 오류 발생");
@@ -53,13 +55,17 @@ export default function CommentSection({
   };
 
   return (
-    <div className="py-10 flex gap-12">
-      <CommentForm onSubmit={handleCreateComment} />
-      <CommentList
-        comments={comments}
-        onDelete={handleDeleteComment}
-        onLikeUpdate={handleLikeUpdate}
-      />
-    </div>
+    <section className="mt-16 flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+      <div className="w-full lg:w-1/2">
+        <CommentForm onSubmit={handleCreateComment} />
+      </div>
+      <div className="w-full lg:w-1/2">
+        <CommentList
+          comments={comments}
+          onDelete={handleDeleteComment}
+          onLikeUpdate={handleLikeUpdate}
+        />
+      </div>
+    </section>
   );
 }

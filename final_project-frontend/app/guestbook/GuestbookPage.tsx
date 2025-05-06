@@ -14,10 +14,10 @@ const GuestbookPage = () => {
   }, []);
 
   return (
-    <main className="w-screen min-h-screen bg-[#1d2025]/80">
-      <div className="w-full max-w-[80%] mx-auto pt-36">
+    <main className="w-full min-h-screen bg-[#1d2025] pt-36 px-4">
+      <div className="max-w-6xl mx-auto">
         <GuestbookHeader />
-        <div className="w-full max-w-[80%] mx-auto grid grid-cols-3 gap-6">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
           {guestbooks.map((guestbook) => (
             <GuestbookCard key={guestbook.id} guestbook={guestbook} />
           ))}

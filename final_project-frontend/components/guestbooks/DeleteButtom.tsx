@@ -27,7 +27,7 @@ export default function DeleteButton({ guestbookId }: DeleteButtonProps) {
 
   return (
     <button
-      className="p-3 font-bold text-white bg-green-500 rounded-xl hover:bg-[#2dcf6c]/50 "
+      className="px-5 py-2 bg-red-500 hover:bg-red-400 text-white font-bold rounded-xl transition-colors duration-200"
       onClick={handleDelete}
     >
       삭제

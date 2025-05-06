@@ -1,3 +1,5 @@
+// components/comments/components/CommentList.tsx
+
 import { CommentListProps } from "@/types/comment";
 import CommentDeleteButton from "./CommentDeleteButton";
 import { likeComment } from "@/utils/api";
@@ -24,33 +26,36 @@ export default function CommentList({
   };
 
   return (
-    <div className="w-full mt-6">
-      <h4 className="font-bold mb-2">댓글</h4>
+    <div className="w-full">
+      <h2 className="text-2xl font-bold mb-4 border-b pb-1 border-amber-100">
+        댓글 목록
+      </h2>
       {comments.map((comment) => (
         <div
           key={comment.id}
-          className="mb-4 border p-3 rounded flex flex-col gap-1.5"
+          className="mb-5 p-4 bg-white text-black rounded-lg shadow-md flex flex-col gap-2"
         >
-          <div className="text-[20px] font-extrabold flex justify-between items-center">
-            <div>
-              <span className="text-green-500 mr-2">{comment.author}</span>
-              <span>님의 댓글</span>
+          <div className="flex justify-between items-center">
+            <div className="text-sm font-semibold">
+              <span className="text-green-500">{comment.author}</span> 님의 댓글
             </div>
             <button
               onClick={() => handleLike(comment.id)}
-              className="flex items-center space-x-1 hover:font-bold hover:text-[#2dcf6c]"
+              className="text-sm hover:font-bold hover:text-green-500 transition"
             >
               ❤️ {comment.likes}
             </button>
           </div>
-          <div className="text-xl">{comment.content}</div>
+          <div className="text-base break-words">{comment.content}</div>
           <div className="text-xs text-gray-500">
             {new Date(comment.createdAt).toLocaleString()}
           </div>
-          <CommentDeleteButton
-            commentId={comment.id}
-            onDeleteSuccess={() => onDelete(comment.id)}
-          />
+          <div className="mt-1">
+            <CommentDeleteButton
+              commentId={comment.id}
+              onDeleteSuccess={() => onDelete(comment.id)}
+            />
+          </div>
         </div>
       ))}
     </div>

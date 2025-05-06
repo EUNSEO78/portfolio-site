@@ -11,6 +11,7 @@ const ClickButton = ({
   hoverBgColor,
   hoverTextColor,
   onClick,
+  className,
 }: ClickButtonProps) => {
   return (
     <button

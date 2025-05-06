@@ -10,7 +10,7 @@ const GlobalNavigationBar = () => {
   };
   return (
     <div className="w-full flex justify-center">
-      <div className="fixed bottom-16 p-5 bg-[rgba(0,0,0,0.5)] text-white flex gap-3 rounded-2xl z-30">
+      <div className="fixed bottom-8 sm:bottom-12 p-4 bg-[rgba(0,0,0,0.5)] text-white flex flex-wrap justify-center gap-3 rounded-2xl z-30 max-w-[90%] sm:max-w-fit">
         <a href="#about-me-page">
           <ClickButton
             value="About Me"

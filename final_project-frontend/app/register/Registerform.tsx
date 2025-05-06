@@ -65,8 +65,7 @@ const RegisterForm = () => {
           value={formData.content}
           onChange={handleChange}
           required
-          rows={5}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm sm:text-base h-50 sm:h-42 md:h-38 lg:h-34"
           placeholder="방명록 내용을 입력해주세요"
         />
       </div>

@@ -5,13 +5,14 @@ const TechStack = () => {
   return (
     <section
       id="tech-stacks-page"
-      className="w-screen bg-[#1d2025] text-white py-[200px]"
+      className="w-full bg-[#1d2025] text-white py-24 px-4 sm:px-10"
     >
-      <div className=" h-20 pb-6 mb-16 border-b border-b-[#494c51] flex justify-center items-end">
-        <span>Tech Stack</span>
-      </div>
-      <div className="h-96">
-        <ul className="w-[700px]  bg-white border-2 border-green-300 rounded-2xl flex gap-5 mx-auto flex-wrap p-6">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-400 mb-12 border-b border-[#494c51] pb-4">
+          Tech Stack
+        </h2>
+
+        <ul className="flex flex-wrap justify-center gap-6">
           {stacks.map((v, i) => (
             <StackCard tech={v} key={i} />
           ))}

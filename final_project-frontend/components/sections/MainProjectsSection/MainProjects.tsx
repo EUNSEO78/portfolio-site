@@ -22,8 +22,13 @@ const setupScrollAnimations = () => {
 
 const MainProjects = () => {
   useEffect(() => {
-    setupScrollAnimations();
-    gsap.to(".panel", { opacity: 1, duration: 0.3, delay: 0.1 });
+    const timeout = setTimeout(() => {
+      setupScrollAnimations();
+      gsap.to(".panel", { opacity: 1, duration: 0.3, delay: 0.1 });
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
