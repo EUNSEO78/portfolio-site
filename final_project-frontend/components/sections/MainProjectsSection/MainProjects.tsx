@@ -15,7 +15,6 @@ const setupScrollAnimations = () => {
       start: "top top",
       pin: true,
       pinSpacing: false,
-      // end: () => "+=" + panel.offsetHeight,
       end: "100%",
     });
   });
@@ -23,8 +22,6 @@ const setupScrollAnimations = () => {
 
 const MainProjects = () => {
   useEffect(() => {
-    // ScrollTrigger.normalizeScroll(true);
-
     const timeout = setTimeout(() => {
       setupScrollAnimations();
       gsap.to(".panel", { opacity: 1, duration: 0.3, delay: 0.1 });
