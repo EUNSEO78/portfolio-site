@@ -9,7 +9,7 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
 React와 NestJS 기반의 풀스택 포트폴리오입니다.  
-사용자는 방명록에 글을 작성하고 댓글을 주고받을 수 있으며, TailwindCSS를 이용한 반응형 UI로 다양한 디바이스에서도 안정적인 사용이 가능합니다.
+사용자는 방명록에 글을 작성하고 댓글을 남길 수 있으며,TailwindCSS를 이용한 반응형 UI로 다양한 디바이스에서도 안정적인 사용이 가능합니다.
 
 ---
 
