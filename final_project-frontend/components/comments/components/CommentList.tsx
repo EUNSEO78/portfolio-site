@@ -4,11 +4,11 @@ import { CommentListProps } from "@/types/comment";
 import CommentDeleteButton from "./CommentDeleteButton";
 import { likeComment } from "@/utils/api";
 
-export default function CommentList({
+const CommentList = ({
   comments,
   onDelete,
   onLikeUpdate,
-}: CommentListProps) {
+}: CommentListProps) => {
   const handleLike = async (commentId: number) => {
     const likedKey = `liked_comment_${commentId}`;
     if (localStorage.getItem(likedKey)) {
@@ -60,4 +60,6 @@ export default function CommentList({
       ))}
     </div>
   );
-}
+};
+
+export default CommentList;

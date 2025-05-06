@@ -1,7 +1,7 @@
 import { CommentFormProps } from "@/types/comment";
 import React, { useState } from "react";
 
-export default function CommentForm({ onSubmit }: CommentFormProps) {
+const CommentForm = ({ onSubmit }: CommentFormProps) => {
   const [formData, setFormData] = useState({ author: "", content: "" });
 
   const handleChange = (
@@ -49,4 +49,6 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
       </form>
     </div>
   );
-}
+};
+
+export default CommentForm;

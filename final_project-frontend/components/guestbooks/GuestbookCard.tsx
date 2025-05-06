@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function GuestbookCard({ guestbook }: GuestbookCardProps) {
+const GuestbookCard = ({ guestbook }: GuestbookCardProps) => {
   const [likes, setLikes] = useState(guestbook.likes);
   const [views, setViews] = useState(guestbook.views);
   const router = useRouter();
@@ -63,4 +63,6 @@ export default function GuestbookCard({ guestbook }: GuestbookCardProps) {
       </div>
     </Link>
   );
-}
+};
+
+export default GuestbookCard;

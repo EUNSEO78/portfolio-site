@@ -1,7 +1,7 @@
 "use client";
 
 import CommentSection from "@/components/comments/CommentSection";
-import DeleteButton from "@/components/guestbooks/DeleteButtom";
+import DeleteButton from "@/components/guestbooks/DeleteButton";
 import GuestbookHeader from "@/components/guestbooks/GuestbookHeader";
 import { GuestbookDetailProps } from "@/types/comment";
 

@@ -8,11 +8,7 @@ import { Comment } from "@/types/comment";
 import CommentForm from "./components/CommentForm";
 import CommentList from "./components/CommentList";
 
-export default function CommentSection({
-  guestbookId,
-}: {
-  guestbookId: number;
-}) {
+const CommentSection = ({ guestbookId }: { guestbookId: number }) => {
   const [comments, setComments] = useState<Comment[]>([]);
 
   const loadComments = async () => {
@@ -68,4 +64,6 @@ export default function CommentSection({
       </div>
     </section>
   );
-}
+};
+
+export default CommentSection;

@@ -7,7 +7,7 @@ interface DeleteButtonProps {
   guestbookId: number;
 }
 
-export default function DeleteButton({ guestbookId }: DeleteButtonProps) {
+const DeleteButton = ({ guestbookId }: DeleteButtonProps) => {
   const router = useRouter();
   const handleDelete = async (e: MouseEvent) => {
     e.preventDefault();
@@ -33,4 +33,6 @@ export default function DeleteButton({ guestbookId }: DeleteButtonProps) {
       삭제
     </button>
   );
-}
+};
+
+export default DeleteButton;

@@ -3,10 +3,10 @@ import { MouseEvent } from "react";
 import { removeComment } from "@/utils/api";
 import { CommentDeleteButtonProps } from "@/types/comment";
 
-export default function CommentDeleteButton({
+const CommentDeleteButton = ({
   commentId,
   onDeleteSuccess,
-}: CommentDeleteButtonProps) {
+}: CommentDeleteButtonProps) => {
   const handleDelete = async (e: MouseEvent) => {
     e.preventDefault();
 
@@ -31,4 +31,6 @@ export default function CommentDeleteButton({
       삭제
     </button>
   );
-}
+};
+
+export default CommentDeleteButton;
