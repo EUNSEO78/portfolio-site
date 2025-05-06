@@ -15,14 +15,16 @@ const setupScrollAnimations = () => {
       start: "top top",
       pin: true,
       pinSpacing: false,
-      end: () => "+=" + panel.offsetHeight,
+      // end: () => "+=" + panel.offsetHeight,
+      end: "100%",
     });
   });
 };
 
 const MainProjects = () => {
   useEffect(() => {
-    ScrollTrigger.normalizeScroll(true);
+    // ScrollTrigger.normalizeScroll(true);
+
     const timeout = setTimeout(() => {
       setupScrollAnimations();
       gsap.to(".panel", { opacity: 1, duration: 0.3, delay: 0.1 });
