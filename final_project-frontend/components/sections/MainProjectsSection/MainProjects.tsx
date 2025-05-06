@@ -22,22 +22,14 @@ const setupScrollAnimations = () => {
 
 const MainProjects = () => {
   useEffect(() => {
+    ScrollTrigger.normalizeScroll(true);
     const timeout = setTimeout(() => {
       setupScrollAnimations();
       gsap.to(".panel", { opacity: 1, duration: 0.3, delay: 0.1 });
       ScrollTrigger.refresh();
     }, 100);
 
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      clearTimeout(timeout);
-      window.removeEventListener("resize", handleResize);
-    };
-    // return () => clearTimeout(timeout);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
