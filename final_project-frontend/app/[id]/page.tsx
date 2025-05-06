@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import GuestbookDetail from "./GuestbookDetail";
 import { getGuestbook } from "@/utils/api";
 
