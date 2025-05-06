@@ -14,7 +14,8 @@ const setupScrollAnimations = () => {
       trigger: panel,
       start: "top top",
       pin: true,
-      pinSpacing: window.innerWidth <= 768,
+      // pinSpacing: window.innerWidth <= 768,
+      pinSpacing: false,
       end: () => "+=" + panel.offsetHeight,
     });
   });
