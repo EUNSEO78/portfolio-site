@@ -9,7 +9,7 @@ const copy = async (text: string) => {
 
 const Footer = () => {
   return (
-    <footer className=" relative w-screen h-[120vh] text-white ">
+    <footer className=" relative w-screen h-[140vh] text-white ">
       <BackgroundVideo src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.mp4" />
       <div className="absolute top-1/2 left-1/2 -translate-x-11/12 -translate-y-1/2 transform text-left flex flex-col gap-40 ">
         <b className="text-7xl">Choi Eun Seo</b>
