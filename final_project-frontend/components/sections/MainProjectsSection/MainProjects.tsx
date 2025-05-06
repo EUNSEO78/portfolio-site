@@ -47,7 +47,7 @@ const MainProjects = () => {
         ))}
       </div>
 
-      {/* 스크롤 여백 확보용 dummy div */}
+      {/* 스크롤 여백 확보용 */}
       <div className="h-screen bg-black flex items-center justify-center"></div>
     </section>
   );
