@@ -5,9 +5,7 @@ const AboutMe = () => {
       className="w-screen min-h-screen bg-[#1d2025] text-white flex justify-center items-center px-4"
     >
       <div className="w-full max-w-[80%] md:max-w-[90%]">
-        <div className="pb-6 text-4xl lg:text-3xl md:text-2xl sm:text-xl font-semibold">
-          About Me
-        </div>
+        <div className="pb-6 font-semibold">About Me</div>
         <div className="py-32 md:py-24 sm:py-12 border-y border-y-[#494c51]">
           <div className="text-green-500 text-4xl lg:text-6xl md:text-4xl sm:text-3xl pb-16 md:pb-12 sm:pb-6 font-bold">
             Backend Development
