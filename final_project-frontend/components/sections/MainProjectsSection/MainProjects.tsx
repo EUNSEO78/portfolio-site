@@ -22,6 +22,7 @@ const setupScrollAnimations = () => {
 
 const MainProjects = () => {
   useEffect(() => {
+    ScrollTrigger.normalizeScroll(true);
     const timeout = setTimeout(() => {
       setupScrollAnimations();
       ScrollTrigger.refresh();
