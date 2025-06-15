@@ -41,10 +41,29 @@ React와 NestJS 기반의 풀스택 포트폴리오입니다.
 
 ## 📸 데모
 
-> 배포 주소 : [https://your-portfolio-url.com](https://your-portfolio-url.com)
+> 배포 주소 : [portfolio-site-two-swart.vercel.app](portfolio-site-two-swart.vercel.app)
 
-<img src="https://your-demo-image-url.gif" alt="Portfolio Demo" width="100%" />
+<img src="/final_project-frontend/public/portfolio-site-image.png" alt="Portfolio Demo" width="100%" />
 
 ---
 
 ## 🗂️ 프로젝트 구조 예시
+
+```
+portfolio-site/
+├── final_project-frontend/      # 프론트엔드(Next.js)
+│   ├── public/
+│   ├── app/
+│   ├── components/
+│   ├── utils/
+│   └── ...
+├── final_project-backend/       # 백엔드(NestJS)
+│   ├── src/
+│   │   ├── guestbooks/
+│   │   ├── comments/
+│   │   ├── app.module.ts
+│   │   └── ...
+│   └── ...
+├── README.md
+└── ...
+```
