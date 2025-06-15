@@ -17,7 +17,7 @@ import { Comment } from './comments/entities/comment.entity';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       entities: [Guestbook, Comment],
-      synchronize: true, // 운영 환경에서는 false 권장
+      synchronize: false, // 운영 환경에서는 false 권장
     }),
     CommentsModule,
     GuestbooksModule,
