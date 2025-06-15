@@ -3,7 +3,7 @@ import { Guestbook } from "@/types/guestbook";
 import { ApiResponse } from "@/types/type";
 import axios from "axios";
 
-const API_URL = "https://portfolio-site-9uva.onrender.com"; // 변경
+const API_URL = process.env.NEXT_PUBLIC_API_URL as string; // 변경
 
 // 모든 방명록 가져오기
 export const getGuestbooks = async (): Promise<Guestbook[]> => {
