@@ -5,6 +5,7 @@ export const MainProjectsData = [
     src: "https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver%202-transcode.mp4",
     subtitle: "Security",
     title: "Hardening Linux Server",
+    href: "https://github.com/EUNSEO78/hardened-linux-server",
     contribution: "100",
     hashtags: [
       "#VirtualBox",
