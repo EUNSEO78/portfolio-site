@@ -8,18 +8,18 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL as string; // 변경
 // 모든 방명록 가져오기
 export const getGuestbooks = async (): Promise<Guestbook[]> => {
   const response = await axios.get<ApiResponse<Guestbook[]>>(
-    `${API_URL}/guestbooks`
+    `${API_URL}/guestbooks`,
   );
   return response.data.data;
 };
 
 // 방명록 작성하기
 export const createGuestbook = async (
-  guestbook: Pick<Guestbook, "author" | "content">
+  guestbook: Pick<Guestbook, "author" | "content">,
 ): Promise<ApiResponse<Guestbook>> => {
   const response = await axios.post<ApiResponse<Guestbook>>(
     `${API_URL}/guestbooks`,
-    guestbook
+    guestbook,
   );
   return response.data;
 };
@@ -27,7 +27,7 @@ export const createGuestbook = async (
 // 방명록 가져오기 (id로)
 export const getGuestbook = async (id: string): Promise<Guestbook> => {
   const response = await axios.get<ApiResponse<Guestbook>>(
-    `${API_URL}/guestbooks/${id}`
+    `${API_URL}/guestbooks/${id}`,
   );
   return response.data.data;
 };
@@ -40,7 +40,7 @@ export const removeGuestbook = async (id: number): Promise<void> => {
 // 좋아요
 export const likeGuestbook = async (id: number): Promise<Guestbook> => {
   const response = await axios.patch<ApiResponse<Guestbook>>(
-    `${API_URL}/guestbooks/${id}/like`
+    `${API_URL}/guestbooks/${id}/like`,
   );
   return response.data.data;
 };
@@ -48,7 +48,7 @@ export const likeGuestbook = async (id: number): Promise<Guestbook> => {
 // 조회수
 export const viewGuestbook = async (id: number): Promise<Guestbook> => {
   const response = await axios.patch<ApiResponse<Guestbook>>(
-    `${API_URL}/guestbooks/${id}/view`
+    `${API_URL}/guestbooks/${id}/view`,
   );
   return response.data.data;
 };
@@ -59,18 +59,18 @@ export const getComments = async (guestbookId: number): Promise<Comment[]> => {
     `${API_URL}/comments`,
     {
       params: { guestbookId },
-    }
+    },
   );
   return response.data.data;
 };
 
 // 댓글 작성
 export const createComment = async (
-  comment: Pick<Comment, "guestbookId" | "author" | "content">
+  comment: Pick<Comment, "guestbookId" | "author" | "content">,
 ): Promise<ApiResponse<Comment>> => {
   const response = await axios.post<ApiResponse<Comment>>(
     `${API_URL}/comments`,
-    comment
+    comment,
   );
   return response.data;
 };
@@ -83,7 +83,7 @@ export const removeComment = async (id: number): Promise<void> => {
 // 댓글 좋아요
 export const likeComment = async (id: number): Promise<Comment> => {
   const response = await axios.patch<ApiResponse<Comment>>(
-    `${API_URL}/comments/${id}/like`
+    `${API_URL}/comments/${id}/like`,
   );
   return response.data.data;
 };

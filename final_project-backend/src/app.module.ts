@@ -6,9 +6,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Guestbook } from './guestbooks/entities/guestbook.entity';
 import { CommentsModule } from './comments/comments.module';
 import { Comment } from './comments/entities/comment.entity';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.DB_HOST,

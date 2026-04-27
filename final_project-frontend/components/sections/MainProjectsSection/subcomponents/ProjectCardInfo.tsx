@@ -21,7 +21,7 @@ const ProjectCardInfo = ({
       </div>
 
       <ClickButton
-        value="Go Site"
+        value="Go Github"
         borderColor="green"
         hoverBgColor="green"
         className="w-full text-sm sm:w-auto sm:text-base"
