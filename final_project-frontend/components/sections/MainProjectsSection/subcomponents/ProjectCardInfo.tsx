@@ -4,6 +4,7 @@ import { ProjectCardInfoProps } from "@/types/type";
 const ProjectCardInfo = ({
   subtitle,
   title,
+  github,
   contribution,
   hashtags,
   description,
@@ -22,6 +23,7 @@ const ProjectCardInfo = ({
 
       <ClickButton
         value="Go Site"
+        github={github}
         borderColor="green"
         hoverBgColor="green"
         className="w-full text-sm sm:w-auto sm:text-base"

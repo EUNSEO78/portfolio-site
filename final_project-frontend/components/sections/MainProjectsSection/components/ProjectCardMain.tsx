@@ -6,6 +6,7 @@ const ProjectCardMain = ({
   src,
   subtitle,
   title,
+  github,
   contribution,
   hashtags,
   description,
@@ -16,6 +17,7 @@ const ProjectCardMain = ({
       <ProjectCardInfo
         subtitle={subtitle}
         title={title}
+        github={github}
         contribution={contribution}
         hashtags={hashtags}
         description={description}

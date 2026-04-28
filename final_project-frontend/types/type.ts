@@ -19,6 +19,7 @@ export const TAILWIND_HOVER_COLORS = {
 };
 export interface ClickButtonProps {
   value: string;
+  github?: string;
   borderColor: keyof typeof TAILWIND_BORDER_COLORS;
   hoverBgColor: keyof typeof TAILWIND_HOVER_COLORS;
   hoverTextColor?: "hover:text-black";
@@ -42,6 +43,7 @@ export interface CurrentDateTimeProps {
 export interface ProjectCardInfoProps {
   subtitle: string;
   title: string;
+  github: string;
   contribution: string;
   hashtags: string[];
   description: string;

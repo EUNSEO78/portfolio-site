@@ -7,13 +7,16 @@ import React from "react";
 
 const ClickButton = ({
   value,
+  github,
   borderColor,
   hoverBgColor,
   hoverTextColor,
   onClick,
 }: ClickButtonProps) => {
   return (
-    <button
+    <a
+      href={github}
+      target="_blank"
       type="button"
       className={`
         border py-3 px-6 rounded-xl 
@@ -25,7 +28,7 @@ const ClickButton = ({
       onClick={onClick}
     >
       {value}
-    </button>
+    </a>
   );
 };
 
