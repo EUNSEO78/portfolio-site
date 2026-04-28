@@ -8,7 +8,7 @@
 ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
-React와 NestJS 기반의 풀스택 포트폴리오이며, 서버 보안 설정 및 API 구조 설계를 함께 학습한 프로젝트입니다.
+React와 NestJS 기반의 풀스택 포트폴리오 웹 애플리케이션입니다.
 사용자는 방명록에 글을 작성하고 댓글을 남길 수 있으며,TailwindCSS를 이용한 반응형 UI로 다양한 디바이스에서도 안정적인 사용이 가능합니다.
 
 ---
@@ -27,7 +27,6 @@ React와 NestJS 기반의 풀스택 포트폴리오이며, 서버 보안 설정 
 - **Node.js**
 - **NestJS**
 - **TypeORM + MySQL**
-- **JWT 기반 인증**
 
 ---
 
