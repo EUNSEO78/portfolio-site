@@ -61,9 +61,4 @@ export const stacks = [
   "Prisma",
 ];
 
-export const security_tools = [
-  "SSH (Access Control)",
-  "UFW (Firewall)",
-  "Fail2Ban (Brute Force Protection)",
-  "PAM (faillock, pwquality)",
-];
+export const security_tools = ["SSH", "UFW", "Fail2Ban", "PAM"];
