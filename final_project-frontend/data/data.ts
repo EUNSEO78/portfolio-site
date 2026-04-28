@@ -3,43 +3,42 @@ import { Project } from "@/types/type";
 export const MainProjectsData = [
   {
     src: "https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver%202-transcode.mp4",
-    subtitle: "Create",
-    title: "MY PORTFOLIO",
+    subtitle: "Security",
+    title: "Hardening Linux Server",
     contribution: "100",
     hashtags: [
-      "#JavaScript",
-      "#NodeJS",
-      "#NestJS",
-      "#React",
-      "#TypeScript",
-      "#NextJS",
-      "#TailwindCSS",
+      "#VirtualBox",
+      "#Ubuntu Server 22.04",
+      "#Kali Linux",
+      "#UFW",
+      "#Fail2Ban",
+      "#PAM (faillock, pwquality)",
     ],
     description:
-      "React와 NestJS로 구현한 풀스택 포트폴리오로, 방명록과 댓글 기능 및 반응형 UI를 제공합니다.",
-  },
-  {
-    src: "https://uploads-ssl.webflow.com/6481baa8b4e61d7cb8a9f0a0/64980d39c97910472fbfa13f_HeroVideo_04_compressed-transcode.mp4",
-    subtitle: "Clone",
-    title: "TEAMPRO(미정)",
-    contribution: "100",
-    hashtags: [
-      "#JavaScript",
-      "#NodeJS",
-      "#NestJS",
-      "#React",
-      "#TypeScript",
-      "#NextJS",
-      "#TailwindCSS",
-    ],
-    description:
-      "React를 활용한 프론트 개발과 Node.js를 활용한 백엔드 개발에 중점을 둔 팀 프로젝트입니다.",
+      "Linux 서버 환경에서 SSH 접근 제어, UFW 방화벽 설정, Fail2Ban, PAM 기반 인증 정책 등을 적용하여 보안 설정(Hardening)을 구성한 프로젝트입니다. Kali Linux를 활용한 공격 시나리오(Brute Force 등)를 통해 설정된 보안 정책의 실제 방어 효과를 검증했습니다.",
   },
 ];
 
 export const SideProjectsData: Project[] = [
   {
     id: 1,
+    src: "portfolio-site-image",
+    title: "portfolio-site",
+    description:
+      "Next.js 기반 API 서버와 MySQL을 연동하여 방명록 및 댓글 기능을 구현한 프로젝트입니다. 데이터 처리 과정과 API 구조를 설계하면서 서버 동작 흐름과 기본적인 보안 고려 사항을 함께 학습했습니다.",
+    tech: [
+      "JavaScript",
+      "Node.js",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "NextJS",
+      "TailwindCSS",
+    ],
+    github: "https://github.com/EUNSEO78/portfolio-site",
+  },
+  {
+    id: 2,
     src: "todolist",
     title: "ToDoList_React",
     description:
@@ -47,74 +46,23 @@ export const SideProjectsData: Project[] = [
     tech: ["React", "TypeScript", "TailwindCSS"],
     github: "https://github.com/EUNSEO78/todolist_react",
   },
-  {
-    id: 2,
-    src: "vegastar",
-    title: "vegastar_clone",
-    description:
-      "Vegastar 공식 웹사이트를 클론한 프로젝트로, GSAP과 Swiper를 활용한 애니메이션 효과와 반응형 인터랙션 구현에 집중했습니다.",
-    tech: ["React", "JavaScript", "GSAP", "Swiper"],
-    github: "https://github.com/EUNSEO78/vegastar_clone",
-  },
-  {
-    id: 3,
-    src: "publishPortpolio",
-    title: "publishing_portfolio",
-    description:
-      "HTML, CSS, JavaScript를 활용해 다양한 레이아웃과 애니메이션을 구현한 퍼블리싱 중심 포트폴리오입니다.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/EUNSEO78/publishing_portfolio",
-  },
-  {
-    id: 4,
-    src: "cafe1",
-    title: "cafe1",
-    description: "간단한 반응형 구현을 목적으로 한 프로젝트 입니다.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/EUNSEO78/cafe1",
-  },
-  {
-    id: 6,
-    src: "twosome",
-    title: "project_twosome2",
-    description:
-      "Twosome Place 웹사이트를 클론한 팀 프로젝트입니다. Firebase를 통한 사용자 인증과 Next.js 기반 SSR 환경에서의 개발 경험을 쌓았습니다.",
-    tech: [
-      "FireBase",
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Next.js",
-      "Tailwind",
-    ],
-    github: "https://github.com/juntae-123/project_twosome2",
-  },
-  {
-    id: 7,
-    src: "hyundai",
-    title: "HyundaiCarPage",
-    page: "https://jiheon0928.github.io/HyundaiCarPage/",
-    description:
-      "Hyundai 웹사이트를 클론한 팀 프로젝트로, 깔끔한 HTML 구조와 슬라이더 구현에 집중했습니다.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/jiheon0928/HyundaiCarPage",
-  },
 ];
 
 export const stacks = [
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
+  "Linux",
   "Node.js",
   "MySQL",
-  "Nest.js",
-  "Express.js",
-  "Prisma",
   "Git",
-  "VS Code",
   "GitHub",
+  "TypeScript",
+  "Next.js",
+  "Express",
+  "Prisma",
+];
+
+export const security_tools = [
+  "SSH (Access Control)",
+  "UFW (Firewall)",
+  "Fail2Ban (Brute Force Protection)",
+  "PAM (faillock, pwquality)",
 ];
