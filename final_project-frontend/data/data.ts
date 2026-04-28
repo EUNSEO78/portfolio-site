@@ -26,14 +26,14 @@ export const SideProjectsData: Project[] = [
     src: "portfolio-site-image",
     title: "portfolio-site",
     description:
-      "Next.js 기반 API 서버와 MySQL을 연동하여 방명록 및 댓글 기능을 구현한 프로젝트입니다. 데이터 처리 과정과 API 구조를 설계하면서 서버 동작 흐름과 기본적인 보안 고려 사항을 함께 학습했습니다.",
+      "NestJS 기반 API 서버와 MySQL을 연동하여 방명록 및 댓글 기능을 구현한 프로젝트입니다. 데이터 처리 과정과 API 구조를 설계하면서 서버 동작 흐름과 기본적인 보안 고려 사항을 함께 학습했습니다.",
     tech: [
       "JavaScript",
       "Node.js",
-      "Next.js",
+      "NestJS",
       "React",
       "TypeScript",
-      "NextJS",
+      "Next.js",
       "TailwindCSS",
     ],
     github: "https://github.com/EUNSEO78/portfolio-site",
@@ -56,7 +56,7 @@ export const stacks = [
   "Git",
   "GitHub",
   "TypeScript",
-  "Next.js",
+  "NestJS",
   "Express",
   "Prisma",
 ];

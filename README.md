@@ -1,4 +1,4 @@
-# 📝 Fullstack Portfolio
+# 📌 Portfolio-site
 
 ![Tech Stack](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
@@ -8,7 +8,7 @@
 ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
-React와 NestJS 기반의 풀스택 포트폴리오입니다.  
+React와 NestJS 기반의 풀스택 포트폴리오이며, 서버 보안 설정 및 API 구조 설계를 함께 학습한 프로젝트입니다.
 사용자는 방명록에 글을 작성하고 댓글을 남길 수 있으며,TailwindCSS를 이용한 반응형 UI로 다양한 디바이스에서도 안정적인 사용이 가능합니다.
 
 ---
@@ -41,19 +41,17 @@ React와 NestJS 기반의 풀스택 포트폴리오입니다.
 
 ## 📸 데모
 
-> 배포 주소 : [portfolio-site-two-swart.vercel.app](portfolio-site-two-swart.vercel.app)
-
 <img src="/final_project-frontend/public/portfolio-site-image.png" alt="Portfolio Demo" width="100%" />
 
 ---
 
 ## 🚀 배포 인프라
 
-| 서비스       | 역할               | 플랫폼/주소                                                                                                       |
-| ------------ | ------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| **Frontend** | 정적 웹 호스팅     | [Vercel](https://vercel.com) ([portfolio-site-two-swart.vercel.app](https://portfolio-site-two-swart.vercel.app)) |
-| **Backend**  | API 서버           | [Render](https://render.com)                                                                                      |
-| **Database** | MySQL 데이터베이스 | [Railway](https://railway.app)                                                                                    |
+| 서비스       | 역할           | 플랫폼/주소                                                                                                       |
+| ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Frontend** | 정적 웹 호스팅 | [Vercel](https://vercel.com) ([portfolio-site-two-swart.vercel.app](https://portfolio-site-two-swart.vercel.app)) |
+| **Backend**  | API Server     | Render                                                                                                            |
+| **Database** | MySQL          | Railway                                                                                                           |
 
 ---
 
