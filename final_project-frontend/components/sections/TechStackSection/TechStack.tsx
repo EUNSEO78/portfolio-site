@@ -8,7 +8,6 @@ const TechStack = () => {
       className="w-full bg-[#1d2025] text-white py-24 px-4 sm:px-10"
     >
       <div className="max-w-5xl mx-auto">
-        {/* 🔥 Security 먼저 */}
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-400 mb-12 border-b border-[#494c51] pb-4">
           Tech Stack
         </h2>
@@ -26,7 +25,6 @@ const TechStack = () => {
         {/* 구분선 */}
         <hr className="border-[#494c51] my-10" />
 
-        {/* 🔧 Dev Stack */}
         <h3 className="text-white text-xl font-semibold text-center mb-6">
           Development Stack
         </h3>
