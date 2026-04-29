@@ -20,7 +20,7 @@ const SideProjects = () => {
         <span>Side Project</span>
       </div>
       <div className="overflow-x-auto pb-8">
-        <div className="flex gap-6 px-2 sm:px-8 min-w-max flex-wrap justify-center sm:flex-nowrap">
+        <div className="flex gap-6 px-4 min-w-max">
           {SideProjectsData.map((project) => (
             <SideProjectCard
               key={project.id}
