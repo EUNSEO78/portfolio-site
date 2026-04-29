@@ -8,8 +8,8 @@
 ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
-React와 NestJS 기반의 풀스택 포트폴리오 웹 애플리케이션입니다.
-사용자는 방명록에 글을 작성하고 댓글을 남길 수 있으며, TailwindCSS를 이용한 반응형 UI로 다양한 디바이스에서도 안정적인 사용이 가능합니다.
+React(Next.js)와 NestJS 기반의 풀스택 웹 애플리케이션으로,
+방명록 및 댓글 기능을 중심으로 API 설계와 데이터 흐름을 구현한 프로젝트입니다.
 
 ---
 
@@ -32,8 +32,9 @@ React와 NestJS 기반의 풀스택 포트폴리오 웹 애플리케이션입니
 
 ## ✨ 주요 기능
 
-- ✅ 방명록 작성 및 삭제
-- ✅ 댓글 작성 및 삭제
+- ✅ 방명록 작성 / 조회 / 삭제
+- ✅ 댓글 작성 / 조회 / 삭제
+- ✅ API 응답 구조 통일 (NestJS Interceptor 적용)
 - ✅ 반응형 디자인
 
 ---
@@ -44,13 +45,20 @@ React와 NestJS 기반의 풀스택 포트폴리오 웹 애플리케이션입니
 
 ---
 
+## 📚 Notion 정리
+
+프로젝트 설계 및 문제 해결 과정은 아래에서 확인할 수 있습니다.  
+👉 https://www.notion.so/34f24cb4abc681fb98c7c311e7d6cad7
+
+---
+
 ## 🚀 배포 인프라
 
 | 서비스       | 역할           | 플랫폼/주소                                                                                                       |
 | ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
 | **Frontend** | 정적 웹 호스팅 | [Vercel](https://vercel.com) ([portfolio-site-two-swart.vercel.app](https://portfolio-site-two-swart.vercel.app)) |
-| **Backend**  | API Server     | Render                                                                                                            |
-| **Database** | MySQL          | Railway                                                                                                           |
+| **Backend**  | API Server     | Render (예정)                                                                                                     |
+| **Database** | MySQL          | Railway (예정)                                                                                                    |
 
 ---
 
