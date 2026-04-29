@@ -1,17 +1,19 @@
 import { Project } from "@/types/type";
 
 const ModalContent = ({ project }: { project: Project }) => (
-  <div className="w-full">
-    <img src={`/${project.src}.png`} alt="" />
-    <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-    <a
-      href={project.page}
-      target="_blank"
-      className="test-xl font-bold text-blue-900"
-    >
-      {project.page}
-    </a>
-    <p className="mb-4">{project.description}</p>
+  <div className="flex flex-col gap-4">
+    <img
+      src={`/${project.src}.png`}
+      alt=""
+      className="rounded-xl object-cover w-full h-40"
+    />
+
+    <h2 className="text-2xl font-bold text-gray-900">{project.title}</h2>
+
+    <p className="text-sm text-gray-700 leading-relaxed">
+      {project.description}
+    </p>
+
     <div className="flex flex-wrap gap-2">
       {project.tech.map((v, i) => (
         <span
@@ -22,14 +24,17 @@ const ModalContent = ({ project }: { project: Project }) => (
         </span>
       ))}
     </div>
-    <a
-      href={project.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded-lg text-center"
-    >
-      GitHub Repository
-    </a>
+
+    <div className="mt-2">
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full text-center bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition"
+      >
+        GitHub Repository
+      </a>
+    </div>
   </div>
 );
 
