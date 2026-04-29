@@ -48,7 +48,7 @@ React(Next.js)와 NestJS 기반의 풀스택 웹 애플리케이션으로,
 ## 📚 Notion 정리
 
 프로젝트 설계 및 문제 해결 과정은 아래에서 확인할 수 있습니다.  
-👉 https://www.notion.so/34f24cb4abc681fb98c7c311e7d6cad7
+👉 https://www.notion.so/Portfolio-site-34f24cb4abc680f495d7f37e7c0e8edc
 
 ---
 
