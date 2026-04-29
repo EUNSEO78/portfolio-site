@@ -19,11 +19,11 @@ const Footer = () => {
             onClick={() => copy("dmstjalstj4@gmail.com")}
           >
             <MdAttachEmail className="text-2xl" />
-            <span> dmstjalstj4@gmail.com</span>
+            <span className="hover:underline"> dmstjalstj4@gmail.com</span>
           </button>
           <button className="flex gap-3" onClick={() => copy("010-4136-5940")}>
             <FaPhoneAlt className="text-2xl" />
-            <span>010-4136-5940</span>
+            <span className="hover:underline">010-4136-5940</span>
           </button>
           <a
             href="https://github.com/EUNSEO78"
@@ -32,7 +32,7 @@ const Footer = () => {
             className="flex gap-3 items-center"
           >
             <FaGithub className="text-3xl" />
-            <span>Github</span>
+            <span className="hover:underline">Github</span>
           </a>
           <span className="text-white/30">
             © 2024 Choi-EunSeo All Rights Reserved
