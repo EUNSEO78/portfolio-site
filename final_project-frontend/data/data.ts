@@ -38,15 +38,6 @@ export const SideProjectsData: Project[] = [
     ],
     github: "https://github.com/EUNSEO78/portfolio-site",
   },
-  {
-    id: 2,
-    src: "todolist",
-    title: "ToDoList_React",
-    description:
-      "React와 TypeScript로 만든 할 일 목록 앱으로, 상태 관리와 컴포넌트 재사용성에 중점을 두었습니다.",
-    tech: ["React", "TypeScript", "TailwindCSS"],
-    github: "https://github.com/EUNSEO78/todolist_react",
-  },
 ];
 
 export const stacks = [
