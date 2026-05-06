@@ -1,4 +1,4 @@
-import { Guestbook } from 'src/guestbooks/entities/guestbook.entity';
+import { Guestbook } from '../../guestbooks/entities/guestbook.entity';
 import {
   Column,
   CreateDateColumn,
