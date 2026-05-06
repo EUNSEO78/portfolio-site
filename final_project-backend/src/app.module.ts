@@ -12,14 +12,17 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: 'postgres',
       host: process.env.DB_HOST,
       port: Number(process.env.DB_PORT),
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       entities: [Guestbook, Comment],
-      synchronize: false, // 운영 환경에서는 false 권장
+      synchronize: true, // 운영 환경에서는 false 권장
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     CommentsModule,
     GuestbooksModule,

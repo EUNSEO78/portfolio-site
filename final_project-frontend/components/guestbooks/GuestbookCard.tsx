@@ -21,6 +21,7 @@ const GuestbookCard = ({ guestbook }: GuestbookCardProps) => {
 
     try {
       const updated = await likeGuestbook(guestbook.id);
+
       setLikes(updated.likes);
       localStorage.setItem(likedKey, "true");
     } catch (err) {
