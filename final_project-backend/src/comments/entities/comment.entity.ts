@@ -11,26 +11,26 @@ import {
 @Entity()
 export class Comment {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  guestbookId: number;
+  guestbookId!: number;
 
   @Column()
-  author: string;
+  author!: string;
 
   @Column()
-  content: string;
+  content!: string;
 
   @Column({ type: 'int', default: 0 })
-  likes: number;
+  likes!: number;
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @ManyToOne(() => Guestbook, (guestbook) => guestbook.comments, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'guestbookId' })
-  guestbook: Guestbook;
+  guestbook!: Guestbook;
 }

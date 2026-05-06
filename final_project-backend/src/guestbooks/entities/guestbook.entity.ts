@@ -10,23 +10,23 @@ import {
 @Entity()
 export class Guestbook {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column({ type: 'varchar', length: 20 })
-  author: string;
+  author!: string;
 
   @Column({ type: 'text' })
-  content: string;
+  content!: string;
 
   @Column({ type: 'int', default: 0 })
-  likes: number;
+  likes!: number;
 
   @Column({ type: 'int', default: 0 })
-  views: number;
+  views!: number;
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @OneToMany(() => Comment, (comment) => comment.guestbook)
-  comments: Comment[];
+  comments!: Comment[];
 }
