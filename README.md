@@ -1,5 +1,10 @@
 # 📌 Portfolio-site
 
+## 🌐 Live Demo
+
+👉 Frontend: https://portfolio-site-two-swart.vercel.app  
+👉 Backend: https://portfolio-site-lxyo.onrender.com
+
 ![Tech Stack](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white)
@@ -26,7 +31,7 @@ React(Next.js)와 NestJS 기반의 풀스택 웹 애플리케이션으로,
 
 - **Node.js**
 - **NestJS**
-- **TypeORM + MySQL**
+- **TypeORM + PostgreSQL**
 
 ---
 
@@ -54,11 +59,11 @@ React(Next.js)와 NestJS 기반의 풀스택 웹 애플리케이션으로,
 
 ## 🚀 배포 인프라
 
-| 서비스       | 역할           | 플랫폼/주소                                                                                                       |
-| ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Frontend** | 정적 웹 호스팅 | [Vercel](https://vercel.com) ([portfolio-site-two-swart.vercel.app](https://portfolio-site-two-swart.vercel.app)) |
-| **Backend**  | API Server     | Render (예정)                                                                                                     |
-| **Database** | MySQL          | Railway (예정)                                                                                                    |
+| 서비스       | 역할           | 플랫폼/주소 |
+| ------------ | -------------- | ----------- |
+| **Frontend** | 정적 웹 호스팅 | Vercel      |
+| **Backend**  | API Server     | Render      |
+| **Database** | PostgreSQL     | Supabase    |
 
 ---
 
