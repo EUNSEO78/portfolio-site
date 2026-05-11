@@ -8,7 +8,7 @@ const AboutMe = () => {
         <div className="pb-6 font-semibold">About Me</div>
         <div className="py-32 md:py-24 sm:py-12 border-y border-y-[#494c51]">
           <div className="text-green-500 text-4xl lg:text-6xl md:text-4xl sm:text-3xl pb-16 md:pb-12 sm:pb-6 font-bold">
-            Server Security & Linux Systems
+            Server / Security Engineer
           </div>
           <div className="text-lg lg:text-base md:text-sm sm:text-xs leading-relaxed text-white">
             안녕하세요! 서버 보안 엔지니어를 목표로 하고 있는 최은서입니다.
