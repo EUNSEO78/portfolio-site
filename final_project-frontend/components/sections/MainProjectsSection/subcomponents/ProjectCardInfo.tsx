@@ -18,7 +18,7 @@ const ProjectCardInfo = ({
         >
           {subtitle}
         </em>
-        <h2 className="text-5xl sm:text-8xl font-bold">{title}</h2>
+        <h2 className="text-3xl sm:text-8xl font-bold">{title}</h2>
       </div>
 
       <ClickButton
