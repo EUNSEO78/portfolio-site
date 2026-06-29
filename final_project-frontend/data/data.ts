@@ -4,6 +4,24 @@ export const MainProjectsData = [
   {
     src: "https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver%202-transcode.mp4",
     subtitle: "Security",
+    title: "SSH Intrusion Detection & Auto-Blocking System",
+    github: "https://github.com/EUNSEO78/ssh-intrusion-detection-system",
+    contribution: "100",
+    hashtags: [
+      "#Python",
+      "#Ubuntu Server 24.04",
+      "#Kali Linux",
+      "#UFW",
+      "#OpenSSH",
+      "#Discord Webhook",
+      "#systemd",
+    ],
+    description:
+      "SSH 로그인 실패 로그를 실시간으로 모니터링하여 Brute Force 공격을 탐지하고, 일정 횟수 이상 공격이 발생하면 UFW를 통해 공격 IP를 자동 차단하는 보안 자동화 프로젝트입니다. Discord Webhook을 이용한 실시간 알림과 systemd 기반 서비스 자동 실행을 구현하여 실제 공격 시나리오를 통해 탐지, 차단, 자동 해제까지 검증했습니다.",
+  },
+  {
+    src: "https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver%202-transcode.mp4",
+    subtitle: "Security",
     title: "Hardening Linux Server",
     github: "https://github.com/EUNSEO78/hardened-linux-server",
     contribution: "100",
@@ -11,6 +29,7 @@ export const MainProjectsData = [
       "#VirtualBox",
       "#Ubuntu Server 22.04",
       "#Kali Linux",
+      "#OpenSSH",
       "#UFW",
       "#Fail2Ban",
       "#PAM (faillock, pwquality)",
