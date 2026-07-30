@@ -3,7 +3,7 @@ import { Project } from "@/types/type";
 export const MainProjectsData = [
   {
     src: "https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver%202-transcode.mp4",
-    subtitle: "Security",
+    subtitle: "Security · Detection & Automation",
     title: "SSH Intrusion Detection & Auto-Blocking System",
     github: "https://github.com/EUNSEO78/ssh-intrusion-detection-system",
     contribution: "100",
@@ -17,11 +17,11 @@ export const MainProjectsData = [
       "#systemd",
     ],
     description:
-      "SSH 로그인 실패 로그를 실시간으로 모니터링하여 Brute Force 공격을 탐지하고, 일정 횟수 이상 공격이 발생하면 UFW를 통해 공격 IP를 자동 차단하는 보안 자동화 프로젝트입니다. Discord Webhook을 이용한 실시간 알림과 systemd 기반 서비스 자동 실행을 구현하여 실제 공격 시나리오를 통해 탐지, 차단, 자동 해제까지 검증했습니다.",
+      "SSH 로그인 실패 로그를 분석하여 Brute Force 공격을 탐지하고, 임계값을 초과한 공격 IP를 UFW를 통해 자동 차단하는 보안 자동화 시스템을 구현했습니다. Discord Webhook 기반 실시간 알림과 systemd 서비스 등록을 적용하고, 실제 공격 시나리오를 통해 공격 탐지 → IP 차단 → 차단 해제의 전체 대응 과정을 검증했습니다.",
   },
   {
     src: "https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver%202-transcode.mp4",
-    subtitle: "Security",
+    subtitle: "Security · Infrastructure Hardening",
     title: "Hardening Linux Server",
     github: "https://github.com/EUNSEO78/hardened-linux-server",
     contribution: "100",
@@ -35,7 +35,7 @@ export const MainProjectsData = [
       "#PAM (faillock, pwquality)",
     ],
     description:
-      "Linux 서버 환경에서 SSH 접근 제어, UFW 방화벽 설정, Fail2Ban, PAM 기반 인증 정책 등을 적용하여 보안 설정(Hardening)을 구성한 프로젝트입니다. Kali Linux를 활용한 공격 시나리오(Brute Force 등)를 통해 설정된 보안 정책의 실제 방어 효과를 검증했습니다.",
+      "Linux 서버 환경에서 SSH 접근 제어, 계정 보안, UFW 방화벽, Fail2Ban, PAM 기반 인증 정책 등을 적용하여 서버 보안 하드닝을 구성했습니다. Kali Linux를 활용한 Brute Force 공격 시나리오를 수행하고 보안 정책의 실제 방어 효과를 검증하며 인프라 취약점 진단과 보안 설정 검증에 필요한 기초 역량을 쌓았습니다.",
   },
 ];
 
@@ -45,7 +45,7 @@ export const SideProjectsData: Project[] = [
     src: "portfolio-site-image",
     title: "portfolio-site",
     description:
-      "NestJS 기반 API 서버와 MySQL을 연동하여 방명록 및 댓글 기능을 구현한 프로젝트입니다. 데이터 처리 과정과 API 구조를 설계하면서 서버 동작 흐름과 기본적인 보안 고려 사항을 함께 학습했습니다.",
+      "NestJS 기반 API 서버와 MySQL을 연동하여 방명록 및 댓글 기능을 구현한 웹 프로젝트입니다. API와 데이터베이스 간의 데이터 처리 흐름을 직접 구현하며 웹 애플리케이션의 구조와 동작 원리를 이해했습니다. 이러한 개발 경험을 바탕으로 웹 애플리케이션의 동작 구조를 이해하고 취약점을 분석하는 기반을 마련했습니다.",
     tech: [
       "JavaScript",
       "Node.js",
@@ -59,16 +59,6 @@ export const SideProjectsData: Project[] = [
   },
 ];
 
-export const stacks = [
-  "Linux",
-  "Node.js",
-  "MySQL",
-  "Git",
-  "GitHub",
-  "TypeScript",
-  "NestJS",
-  "Express",
-  "Prisma",
-];
+export const stacks = ["Linux", "Git", "GitHub", "Ubuntu Server", "Kali Linux"];
 
-export const security_tools = ["SSH", "UFW", "Fail2Ban", "PAM"];
+export const security_tools = ["SSH", "UFW", "Fail2Ban", "PAM", "Burp Suite"];

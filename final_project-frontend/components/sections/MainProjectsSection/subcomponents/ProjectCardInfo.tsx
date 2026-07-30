@@ -14,11 +14,11 @@ const ProjectCardInfo = ({
       <div className="flex flex-col gap-2">
         <em
           style={{ fontFamily: "Mazius, sans-serif", whiteSpace: "pre-wrap" }}
-          className="text-3xl sm:text-5xl"
+          className="text-1xl sm:text-2xl"
         >
           {subtitle}
         </em>
-        <h2 className="text-3xl sm:text-8xl font-bold">{title}</h2>
+        <h2 className="text-2xl sm:text-4xl font-bold">{title}</h2>
       </div>
 
       <ClickButton

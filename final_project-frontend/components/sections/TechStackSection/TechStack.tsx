@@ -13,7 +13,7 @@ const TechStack = () => {
         </h2>
 
         <h3 className="text-green-300 text-xl font-semibold text-center mb-6">
-          Security Tools
+          Stacks
         </h3>
 
         <ul className="flex flex-wrap justify-center gap-6 mb-12">
@@ -26,7 +26,7 @@ const TechStack = () => {
         <hr className="border-[#494c51] my-10" />
 
         <h3 className="text-white text-xl font-semibold text-center mb-6">
-          Development Stack
+          Security Tools
         </h3>
 
         <ul className="flex flex-wrap justify-center gap-6">
