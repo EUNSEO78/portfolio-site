@@ -1,15 +1,20 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 const useCurrentTime = () => {
-  const [currentTime, setCurrentTime] = useState<string>(
-    new Date().toLocaleTimeString()
-  );
+  const [currentTime, setCurrentTime] = useState<string>("");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString("ko-KR"));
-    }, 1000);
+    const updateTime = () => {
+      setCurrentTime(
+        new Date().toLocaleTimeString("ko-KR")
+      );
+    };
+
+    updateTime();
+
+    const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
   }, []);

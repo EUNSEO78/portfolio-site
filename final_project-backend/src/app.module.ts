@@ -20,9 +20,6 @@ import { ConfigModule } from '@nestjs/config';
       database: process.env.DB_DATABASE,
       entities: [Guestbook, Comment],
       synchronize: true, // 운영 환경에서는 false 권장
-      ssl: {
-        rejectUnauthorized: false,
-      },
     }),
     CommentsModule,
     GuestbooksModule,

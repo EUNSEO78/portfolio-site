@@ -1,3 +1,4 @@
+
 import {
   ClickButtonProps,
   TAILWIND_BORDER_COLORS,
@@ -13,15 +14,18 @@ const ClickButton = ({
   hoverTextColor,
   onClick,
 }: ClickButtonProps) => {
+  const isExternalLink =
+    github?.startsWith("http://") || github?.startsWith("https://");
+
   return (
     <a
       href={github}
-      target="_blank"
-      type="button"
+      target={isExternalLink ? "_blank" : undefined}
+      rel={isExternalLink ? "noopener noreferrer" : undefined}
       className={`
-        border py-3 px-6 rounded-xl 
-        ${TAILWIND_BORDER_COLORS[borderColor]} 
-        ${TAILWIND_HOVER_COLORS[hoverBgColor]} 
+        border py-3 px-6 rounded-xl
+        ${TAILWIND_BORDER_COLORS[borderColor]}
+        ${TAILWIND_HOVER_COLORS[hoverBgColor]}
         ${hoverTextColor}
         transition duration-300
       `}
